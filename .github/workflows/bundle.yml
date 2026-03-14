@@ -11,7 +11,7 @@ jobs:
     build_linux:
         uses: l3dotdev-org/whisper-gdextension/.github/workflows/build_x_linux.yml@main
     bundle:
-        runs-on: ubuntu-latest
+        runs-on: blacksmith-4vcpu-ubuntu-2404
         needs: [build_windows, build_linux]
         steps:
             - name: Checkout repository
